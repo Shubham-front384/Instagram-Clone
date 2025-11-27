@@ -1,0 +1,213 @@
+@font-face {
+  font-family: InstagramFont;
+  src: url(instagram.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #1a1a1a;
+  color: #fafafa;
+  overflow: hidden;
+  font-family: InstagramFont;
+  font-size: 14px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Top part */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.1429rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: black;
+}
+
+.top .instagram-logo {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.top .instagram-logo .logo {
+  width: 28%;
+  padding-top: .6rem;
+}
+
+.top .instagram-logo .arrow {
+  font-size: 1.25rem;
+}
+
+.instagram-like {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.top .instagram-like .add,
+.top .instagram-like .heart {
+  font-size: 1.7rem;
+}
+
+/* Main Content */
+.main-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: .75rem;
+}
+
+/* Reel */
+.all-reels {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+.reel {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.all-reels {
+  height: 94vh;
+  position: relative;
+}
+
+.reel {
+  height: 100vh;
+  position: relative;
+}
+
+.reel .user-info {
+  position: absolute;
+  bottom: 4.5rem;
+  padding: 0 3.5rem 1rem 1rem;
+  width: 95%;
+}
+
+.reel .user-info .profile {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  justify-content: flex-start;
+}
+
+.reel .user-info .profile .profile1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.reel .user-info .profile .profile1 h5 {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.reel .user-info .profile .profile1 h5 .profile-follow {
+  text-transform: capitalize;
+}
+
+.reel .user-info .profile .profile1 .profile-img {
+  width: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.reel .user-info .profile .profile-music {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: 5px 10px;
+  border: 2px solid #fafafa;
+  border-radius: 20px;
+}
+
+.user-details {
+  position: absolute;
+  bottom: 9.5rem;
+  right: .5rem;
+}
+
+.user-details ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.user-details ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+
+.user-details ul li>span i {
+  font-size: 1.75rem;
+}
+
+.music-img {
+  width: 10%;
+  position: absolute;
+  right: .5rem;
+  bottom: 5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid gray;
+  padding: .2rem;
+}
+
+.all-reels::-webkit-scrollbar {
+  display: none;
+}
+
+/* Bottom part */
+.bottom {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: black;
+}
+
+.bottom-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 1rem 0;
+}
+
+.bottom-icons i {
+  font-size: 2rem;
+}
+
+.bottom-icons li a {
+  text-decoration: none;
+  color: #fafafa;
+}
